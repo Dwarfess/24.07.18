@@ -7,18 +7,18 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "devbuild": "ng build --output-path=dist/dev",
+    "prodbuild": "ng build --prod --output-path=dist/prod"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^6.0.9",
-    "@angular/cdk": "^6.4.1",
+    "@angular/animations": "^6.0.2",
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
     "@angular/core": "^6.0.2",
     "@angular/forms": "^6.0.2",
     "@angular/http": "^6.0.2",
-    "@angular/material": "^6.4.1",
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
