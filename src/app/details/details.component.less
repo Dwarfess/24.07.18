@@ -1,0 +1,82 @@
+@firstColor: #17a2b8;
+@secondColor: #747474;
+@thirdColor: #eee;
+
+
+.mat-card{
+  padding:10px;
+  &:after{.after}
+
+  .mat-card-image{
+    float:left;
+    width:128px;
+    margin:0 !important;
+  }
+
+  .mat-card-details{
+    margin-left:10px;
+    float:left;
+
+    .mat-card-title{font-size:30px;}
+
+    .mat-card-content{
+      padding:0 10px;
+
+      .address{
+        .country{font-weight: bold}
+
+        p, span{
+          margin:5px 0;
+          color:@secondColor;
+        }
+        h3{
+          margin:15px 0 0 0;
+          font-weight:200;
+        }
+
+        hr{
+          margin-top:2px;
+        }
+      }
+
+      .contacts{
+        margin:20px 0;
+        color:@secondColor;
+        .mat-icon{font-size:16px}
+
+        p{margin:0}
+      }
+    }
+  }
+}
+
+
+
+/*my mixings*/
+.after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.divAbs(@top: 0; @left: 0) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: @top;
+  margin-left: @left;
+}
+
+.bg(@url; @r: no-repeat; @s: cover; @a: scroll) {
+  background: url(@url) @r top center @a;
+  -webkit-background-size: @s;
+  -moz-background-size: @s;
+  -o-background-size: @s;
+  background-size: @s;
+}
+
+.br(@font: 1px; @color: @secondColor) {
+  border: @font solid @color !important;
+}

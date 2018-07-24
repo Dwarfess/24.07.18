@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
 import {HttpService} from '../services/http.service';
 import {Client} from '../services/client';
+
 
 @Component({
   selector: 'app-clients',
@@ -11,7 +14,7 @@ export class ClientsComponent implements OnInit {
 
     clients: Client[];
 
-    constructor(private service: HttpService) {}
+    constructor(private service: HttpService, private router: Router) {}
 
     ngOnInit() {
         this.getClients();
@@ -23,6 +26,11 @@ export class ClientsComponent implements OnInit {
             .subscribe(data => {
                 this.clients = data;
             });
+    }
+
+    onSelect(client) {
+        this.router.navigate(['/clients', (client.general.firstName) + (client.general.lastName)])
+            .then(response => response);
     }
 
 }

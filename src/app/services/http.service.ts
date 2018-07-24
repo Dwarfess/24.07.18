@@ -16,5 +16,4 @@ export class HttpService {
     public getClients(): Observable<Client[]> {
         return this.http.get<Client[]>(this.url);
     }
-
 }

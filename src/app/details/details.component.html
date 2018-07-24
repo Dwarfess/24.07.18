@@ -1,3 +1,29 @@
-<p>
-  details works!
-</p>
+<mat-card class="example-card">
+
+  <img mat-card-image src="{{client?.general.avatar}}" alt="Photo of a Shiba Inu">
+  <div class="mat-card-details">
+    <mat-card-header>
+      <mat-card-title>{{client?.general.firstName}} {{client?.general.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{client?.job.title}}</mat-card-subtitle>
+      <mat-card-subtitle>({{client?.job.company}})</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+      <div class="address">
+        <h3>Address</h3>
+        <hr>
+        <span class = "country">{{client?.address.country}}, </span>
+        <span>{{client?.address.city}}, </span>
+        <span>{{client?.address.zipCode}}</span>
+        <p>{{client?.address.street}}</p>
+      </div>
+
+      <div class="contacts">
+        <p><mat-icon>phone</mat-icon><span>{{client?.contact.phone}}</span></p>
+        <p><mat-icon>email</mat-icon><span>{{client?.contact.email}}</span></p>
+      </div>
+
+    </mat-card-content>
+  </div>
+</mat-card>
+
