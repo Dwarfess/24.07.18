@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit {
         this.activatedRoute.params.forEach((params: Params) => {
             let name = params['name']; // get client id(name)
 
-            // http get clients
+            // http gets all of the clients and find  the client
             this.service.getClients()
                 .subscribe(data => {
                     this.client = data.find(x => (x.general.firstName) + (x.general.lastName) === name);
